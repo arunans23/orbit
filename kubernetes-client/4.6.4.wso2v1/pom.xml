@@ -68,6 +68,12 @@
             <version>${zjsonpatch.version}</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>io.fabric8</groupId>
+            <artifactId>kubernetes-server-mock</artifactId>
+            <version>${kubernetes-client.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -86,6 +92,7 @@
                             io.fabric8.kubernetes.*;version="${project.version}";-split-package:=merge-first,
                             io.fabric8.openshift.*;version="${project.version}",
                             io.fabric8.zjsonpatch.*;version="${project.version}"
+                            com.mifmif.common.regex.*;version="4.6.4"
                         </Export-Package>
                         <Private-Package>
                             io.fabric8.kubernetes.client.internal.*
